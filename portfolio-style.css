@@ -537,12 +537,12 @@ nav ul li a:hover::after{
 /* ====== RESPONSIVE ====== */
 @media (max-width: 900px){
   .hero{
-    grid-template-columns: 1fr;
-    text-align:center;
+    grid-template-columns: 1fr 1fr !important;
+    text-align:left;
   }
-  .hero p{margin:auto;}
-  .btns{justify-content:center;}
-  nav ul{display:none;} /* simple mobile hide */
+  .hero p{margin:0;}
+  .btns{justify-content:flex-start;}
+  nav ul{display:flex;} /* simple mobile hide */
   .profile .circle{width: 230px;height: 230px;}
 }
 /* FOOTER */
