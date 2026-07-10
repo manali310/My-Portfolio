@@ -580,3 +580,96 @@ nav ul li a:hover::after{
     transform: translateY(-2px); /* બટન સહેજ ઉપર આવશે */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+/* Mobile Responsive (Updated) */
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden; /* આનાથી આડી સ્ક્રોલબાર નહીં આવે */
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    padding: 15px; /* થોડી સ્પેસ આપવા માટે */
+    box-sizing: border-box;
+  }
+
+  /* બધી જ વસ્તુઓને એકસાથે flex-column આપવાની જગ્યાએ, જે લેઆઉટ છે એને જ ટાર્ગેટ કરો */
+  .container,
+  .hero,
+  .section,
+  .main-wrapper,
+  .content-wrapper,
+  .portfolio-section,
+  .about-section,
+  .contact-section,
+  .row {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px; /* થોડી વધુ જગ્યા આપવા */
+    box-sizing: border-box;
+  }
+
+  /* Grid સિસ્ટમ માટે */
+  .portfolio-grid,
+  .cards {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* એક લાઈનમાં એક જ કાર્ડ દેખાશે */
+    width: 100% !important;
+    gap: 16px;
+  }
+
+  /* Navigation Bar ને મોબાઈલ માટે */
+  .nav-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  /* Buttons Group */
+  .buttons-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  /* લિંક્સ (a tags) ને 100% કરવાથી મેનુ બગડી શકે, એટલે ફક્ત બટન વાળી લિંકને જ ટાર્ગેટ કરો */
+  .portfolio-btn,
+  button,
+  .btn {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* Images અને Videos */
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Typography (લખાણ) */
+  h1 {
+    font-size: 26px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
